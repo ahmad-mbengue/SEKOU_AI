@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="logo-mark.svg" type="image/svg+xml">
+<title>Sekou · Connexion</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth">
+<main class="card">
+<img src="logo.svg" alt="Sekou" class="auth-logo">
+<h1 id="title">Bienvenue</h1>
+<p id="subtitle" class="lead"></p>
+
+<!-- 1. Choix : créer un compte ou se connecter -->
+<section id="view-choice" class="view">
+    <button type="button" class="btn primary" data-go="register">Créer un compte</button>
+    <button type="button" class="btn secondary" data-go="login">Se connecter</button>
+</section>
+
+<!-- 2. Inscription : email + mot de passe saisi deux fois -->
+<section id="view-register" class="view" hidden>
+    <form id="register-form">
+    <label>Email
+        <input type="email" id="register-email" autocomplete="email" required>
+    </label>
+    <label>Mot de passe (8 caractères minimum)
+        <input type="password" id="register-password" autocomplete="new-password" minlength="8" maxlength="72" required>
+    </label>
+    <label>Confirmer le mot de passe
+        <input type="password" id="register-confirm" autocomplete="new-password" minlength="8" maxlength="72" required>
+        </label>
+    <label class="check"><input type="checkbox" class="toggle-pw"> Afficher les mots de passe</label>
+    <button type="submit" class="btn primary">Continuer</button>
+    </form>
+    <button type="button" class="linkbtn" data-go="choice">← Retour</button>
+</section>
+
+<!-- 3. Vérification de l'email par code -->
+<section id="view-verify" class="view" hidden>
+    <form id="verify-form">
+    <label>Code reçu par email
+        <input type="text" id="verify-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+            autocomplete="one-time-code" placeholder="123456" required>
+    </label>
+    <button type="submit" class="btn primary">Valider</button>
+    </form>
+    <button type="button" class="linkbtn" id="resend-verify">Renvoyer le code</button>
+    <button type="button" class="linkbtn" data-go="choice">← Retour</button>
+</section>
+
+<!-- Connexion -->
+<section id="view-login" class="view" hidden>
+    <form id="login-form">
+    <label>Email
+        <input type="email" id="login-email" autocomplete="email" required>
+    </label>
+    <label>Mot de passe
+        <input type="password" id="login-password" autocomplete="current-password" required>
+    </label>
+    <label class="check"><input type="checkbox" class="toggle-pw"> Afficher le mot de passe</label>
+    <button type="submit" class="btn primary">Se connecter</button>
+    </form>
+    <button type="button" class="linkbtn" data-go="forgot">Mot de passe oublié ?</button>
+    <button type="button" class="linkbtn" data-go="choice">← Retour</button>
+</section>
+
+<!-- Mot de passe oublié : on prouve qu'on possède l'email -->
+<section id="view-forgot" class="view" hidden>
+    <form id="forgot-form">
+    <label>Email du compte
+        <input type="email" id="forgot-email" autocomplete="email" required>
+    </label>
+    <button type="submit" class="btn primary">Envoyer le code</button>
+    </form>
+    <button type="button" class="linkbtn" data-go="login">← Retour à la connexion</button>
+</section>
+
+<!-- Nouveau mot de passe, avec le code reçu -->
+<section id="view-reset" class="view" hidden>
+    <form id="reset-form">
+    <label>Code reçu par email
+        <input type="text" id="reset-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+            autocomplete="one-time-code" placeholder="123456" required>
+    </label>
+    <label>Nouveau mot de passe (8 caractères minimum)
+        <input type="password" id="reset-password" autocomplete="new-password" minlength="8" maxlength="72" required>
+    </label>
+    <label>Confirmer le nouveau mot de passe
+        <input type="password" id="reset-confirm" autocomplete="new-password" minlength="8" maxlength="72" required>
+    </label>
+    <label class="check"><input type="checkbox" class="toggle-pw"> Afficher les mots de passe</label>
+    <button type="submit" class="btn primary">Changer le mot de passe</button>
+    </form>
+    <button type="button" class="linkbtn" id="resend-reset">Renvoyer le code</button>
+    <button type="button" class="linkbtn" data-go="login">← Retour à la connexion</button>
+</section>
+
+<p id="error" role="alert"></p>
+<p id="info" role="status"></p>
+</main>
+<script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Environnement & Secrets (JAMAIS sur Git)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Fichiers système & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
