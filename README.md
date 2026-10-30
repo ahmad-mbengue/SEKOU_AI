@@ -1,12 +1,11 @@
 # 🦜 Sekou — Assistant Vocal & Multimodal IA
 
-Sekou est un assistant conversationnel moderne, réactif et multimodal propulsé par l'API **Google Gemini (Gemini 3.8 Flash)**, avec un backend en **PHP 8.2+ / PostgreSQL** et une interface **Vanilla JavaScript / CSS** moderne inspirée de l'ergonomie de ChatGPT.
+Sekou est un assistant conversationnel moderne, réactif et multimodal propulsé par l'API **Google Gemini (Gemini 3.8 Flash)**, avec un backend en **PHP 8.2+ / PostgreSQL** et une interface **Vanilla JavaScript / CSS** moderne.
 
----
 
-## ✨ Fonctionnalités principales
+##  Fonctionnalités principales
 
-- **🧠 Intelligence Artificielle de pointe** : Intégration de `gemini-3.8-flash` (avec secours automatique sur `gemini-3.1-flash-lite`), optimisé pour des réponses riches, structurées et complètes.
+- **Intelligence Artificielle de pointe** : Intégration de `gemini-3.8-flash` (avec secours automatique sur `gemini-3.1-flash-lite`), optimisé pour des réponses riches, structurées et complètes.
 - **📎 Multimodal & Analyse de documents** : Bouton d'ajout de fichiers (`+`) permettant de joindre et analyser des images (`PNG`, `JPG`), des documents `PDF`, ou des fichiers texte (`TXT`, `MD`, `CSV`, `JSON`).
 - **🎙️ Voix & Mode Mains Libres** :
   - Reconnaissance vocale (*Speech-to-Text*) via Web Speech API.
@@ -56,7 +55,7 @@ AI_project/
 
 ---
 
-## 🚀 Installation & Démarrage
+## Installation & Démarrage
 
 ### 1. Prérequis
 - **PHP 8.2+** avec extensions `pdo_pgsql`, `curl`, `mbstring`, `openssl`
@@ -113,6 +112,6 @@ Ouvrez le dossier `Frontend` avec un serveur local (ex. l'extension **Live Serve
 
 ---
 
-## 👨‍💻 Auteur
+## Auteur
 Développé avec passion par **[Ahmad At-Tijani MBENGUE](https://github.com/ahmad-mbengue)**.
 Dédié aux étudiants et à la communauté de l'**ESP**.
