@@ -64,8 +64,8 @@ AI_project/
 
 ### 2. Cloner le projet
 ```bash
-git clone https://github.com/ahmad-mbengue/sekou-assistant.git
-cd sekou-assistant
+git clone https://github.com/ahmad-mbengue/SEKOU_AI.git
+cd SEKOU_AI
 ```
 
 ### 3. Configurer l'environnement
