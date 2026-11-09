@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000"; // adresse du backend 
+const API_URL = "https://sekou-backend.onrender.com"; // adresse du backend Render 
 
 //  Éléments de la page 
 const appContainer = document.querySelector(".app");
